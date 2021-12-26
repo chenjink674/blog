@@ -22,6 +22,7 @@ func main() {
 	logs.Info("app initializing")
 	conf.Init()
 	model.Init()
+
 	quit := make(chan os.Signal)
 	signal.Notify(quit, syscall.SIGINT, syscall.SIGTERM, syscall.SIGKILL)
 	logs.Info("app running")
